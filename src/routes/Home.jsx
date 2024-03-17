@@ -5,9 +5,18 @@ import '../App.css'
 import f1 from '../assets/img/f1.png'
 import f2 from '../assets/img/f2.png'
 import f3 from '../assets/img/f3.png'
+import hambrg from '../assets/img/hamburger.svg'
+import close from '../assets/img/close.svg'
+import { useState } from 'react';
 
 
 export default function Home() {
+    const [isActive, setActive] = useState(false);
+
+    const handleClick = () => {
+        setActive(!isActive);
+    }
+
     return (
         <>
             <div className="container">
@@ -20,6 +29,24 @@ export default function Home() {
                         <Link to="/trend">Trend</Link>
                         <Link to="/categories">Kategoriler</Link>
                     </div>
+                    <div className="mobile-header">
+                        <a href="#"><img src={hambrg} alt="" onClick={handleClick}/></a>
+                    
+                        {isActive && 
+
+                            <div className="mobile-menu">
+                                
+                                <ul>
+                                    <li><Link to="/">Anasayfa</Link></li>
+                                    <li><Link to="/new">Haber</Link></li>
+                                    <li><Link to="/popular">Popüler</Link></li>
+                                    <li><Link to="/trend">Trend</Link></li>
+                                    <li><Link to="/categories">Kategoriler</Link></li>
+                                </ul>
+                                <a href="#"><img src={close} alt="" onClick={handleClick}/></a>
+                            </div> 
+                        }
+                    </div> 
                 </div>
                 <div className="content">
                     <div className="right-sc">

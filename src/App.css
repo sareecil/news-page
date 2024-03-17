@@ -15,12 +15,17 @@ body {
 .container {
   margin: 0 auto;
   width: 1440px;
+  display: grid;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   margin-block: 70px;
+}
+
+.mobile-header {
+  display: none;
 }
 
 a {
@@ -155,4 +160,51 @@ hr {
   color: #5E607A;
   font-size: 15px;
   font-weight: 400;
+}
+
+.mobile-menu{
+  width: 30px;
+  display: flex;
+  position: absolute;
+  top: 0;
+  right: 114px;
+  background-color: #ffffff;
+
+}
+
+.mobile-menu img {
+  margin-left: 10px;
+}
+
+.mobile-menu {
+  background-color: #ffffff;
+
+}
+
+.mobile-menu li {
+  list-style: none;
+  color: #00001A;
+  padding: 20px;
+  border: none;
+  background-color: #ffffff;
+}
+.mobile-menu a {
+  color: #00001A;
+}
+
+@media (max-width: 769px) { 
+  .h-links {
+    display: none;
+  }
+  .mobile-header {
+    display: block;
+    position: relative;
+  }
+  .header {
+    margin-inline: 130px;
+    justify-content: first baseline;
+  }
+  .active {
+    width: 256px;
+  }
 }
