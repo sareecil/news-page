@@ -193,6 +193,9 @@ hr {
 }
 
 @media (max-width: 769px) { 
+  .container {
+    width: 569px;
+  }
   .h-links {
     display: none;
   }
@@ -201,10 +204,29 @@ hr {
     position: relative;
   }
   .header {
-    margin-inline: 130px;
+    margin-inline: 30px;
     justify-content: first baseline;
   }
   .active {
     width: 256px;
+  }
+  .content {
+    display: block;
+    margin-left: 73px;
+  }
+  .right-sc {
+    margin-bottom: 100px;
+  }
+  .right-sc img {
+    width: 400px;
+    height: 400px;
+  }
+  .r-title {
+    display: block;
+  }
+
+  .news {
+    display: block;
+    margin: 0 auto;
   }
 }
